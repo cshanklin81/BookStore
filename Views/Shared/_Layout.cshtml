@@ -8,8 +8,30 @@
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
-    <div>
-        @RenderBody()
+    <div class="bg-dark text-white p-2">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col navbar-brand">Book Store</div>
+                <div class="col-6 text-right">
+                    <vc:cart-summary />
+                </div>
+            </div>
+        </div>
     </div>
+
+    <div class="row m-1 p-1">
+        <div class="col-1">
+            <vc:navigation-menu />
+        </div>
+        <div class="text-center">
+            <div class="text-center">
+                <h1>Let's Look at Some Books</h1>
+            </div>
+        </div>
+        <div class="text-center">
+            @RenderBody()
+        </div>
+    </div>
+
 </body>
 </html>
